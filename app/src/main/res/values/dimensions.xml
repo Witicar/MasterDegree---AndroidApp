@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Block height, width and margin-->
+    <dimen name="login_register_height">40dp</dimen>
+    <dimen name="text_login_width">80dp</dimen>
+    <dimen name="text_register_width">130dp</dimen>
+    <dimen name="field_login_width">180dp</dimen>
+    <dimen name="field_register_width">160dp</dimen>
+    <dimen name="login_register_margin">18dp</dimen>
+
+</resources>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.witicar.medbeacon.Activities.RegisterActivityOne">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#FFFFFF">
+
+    <!-- /////////////// Name ////////////// -->
+
+        <TextView
+            android:id="@+id/register_username_text"
+            android:layout_width="@dimen/text_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:text="@string/register_username"
+            android:layout_margin="@dimen/login_register_margin"/>
+
+        <TextView
+            android:id="@+id/register_password_text"
+            android:layout_width="@dimen/text_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/register_username_text"
+            android:text="@string/register_password"
+            android:layout_margin="@dimen/login_register_margin"/>
+
+        <TextView
+            android:id="@+id/register_confirm_password_text"
+            android:layout_width="@dimen/text_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/register_password_text"
+            android:text="@string/register_confirm_password"
+            android:layout_margin="@dimen/login_register_margin"/>
+
+        <TextView
+            android:id="@+id/register_mail_text"
+            android:layout_width="@dimen/text_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/register_confirm_password_text"
+            android:text="@string/register_mail"
+            android:layout_margin="@dimen/login_register_margin"/>
+
+        <!-- /////////////// Field ////////////// -->
+
+
+        <EditText
+            android:id="@+id/register_username_field"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            app:layout_constraintLeft_toRightOf="@id/register_username_text"
+            android:minEms="5"
+            android:inputType="textPersonName"
+            android:layout_margin="@dimen/login_register_margin"
+            android:background="@color/field_color"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/register_password_field"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            app:layout_constraintTop_toBottomOf="@id/register_username_field"
+            app:layout_constraintLeft_toRightOf="@id/register_password_text"
+            android:minEms="5"
+            android:inputType="textPassword"
+            android:layout_margin="@dimen/login_register_margin"
+            android:background="@color/field_color"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/register_confirm_password_field"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            app:layout_constraintTop_toBottomOf="@id/register_password_field"
+            app:layout_constraintLeft_toRightOf="@id/register_confirm_password_text"
+            android:minEms="5"
+            android:inputType="textPassword"
+            android:layout_margin="@dimen/login_register_margin"
+            android:background="@color/field_color"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/register_mail_field"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            app:layout_constraintTop_toBottomOf="@id/register_confirm_password_field"
+            app:layout_constraintLeft_toRightOf="@id/register_mail_text"
+            android:minEms="5"
+            android:inputType="textEmailAddress"
+            android:layout_margin="@dimen/login_register_margin"
+            android:textColor="@color/black"
+            android:background="@color/field_color"/>
+
+        <!--////////////////////////// Button //////////////////////-->
+
+        <Button
+            android:id="@+id/register_next_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            app:layout_constraintTop_toBottomOf="@id/register_mail_text"
+            android:layout_marginTop="16dp"
+            android:onClick="registerNextStep"/>
+
+        <!--////////////////////////// Pointer Information //////////////////////-->
+
+        <TextView
+            android:id="@+id/register_field_required"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/register_next_step"
+            android:text="@string/require_fields"/>
+
+        <!--//////////////////////Wrong Field Data/////////////////////////////////-->
+
+        <TextView
+            android:id="@+id/register_wrong_username"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/red"
+            app:layout_constraintTop_toBottomOf="@id/register_username_field"
+            app:layout_constraintLeft_toRightOf="@id/register_username_text"
+            android:layout_marginLeft="@dimen/login_register_margin"
+            android:text="@string/register_wrong"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/register_wrong_password"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/red"
+            app:layout_constraintTop_toBottomOf="@id/register_password_field"
+            app:layout_constraintLeft_toRightOf="@id/register_password_text"
+            android:layout_marginLeft="@dimen/login_register_margin"
+            android:text="@string/register_wrong"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/register_wrong_confirm_password"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/red"
+            app:layout_constraintTop_toBottomOf="@id/register_confirm_password_field"
+            app:layout_constraintLeft_toRightOf="@id/register_confirm_password_text"
+            android:layout_marginLeft="@dimen/login_register_margin"
+            android:text="@string/register_wrong"
+            android:visibility="invisible"/>
+
+        <TextView
+            android:id="@+id/register_not_matched_password"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/red"
+            app:layout_constraintTop_toBottomOf="@id/register_confirm_password_field"
+            app:layout_constraintLeft_toRightOf="@id/register_confirm_password_text"
+            android:layout_marginLeft="@dimen/login_register_margin"
+            android:text="@string/register_wrong_match"
+            android:visibility="invisible"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/register_wrong_mail"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/red"
+            app:layout_constraintTop_toBottomOf="@id/register_mail_field"
+            app:layout_constraintLeft_toRightOf="@id/register_mail_text"
+            android:layout_marginLeft="@dimen/login_register_margin"
+            android:text="@string/register_wrong"
+            android:visibility="invisible"/>
+
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>

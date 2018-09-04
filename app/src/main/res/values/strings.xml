@@ -1,0 +1,57 @@
+<resources>
+
+    <string name="app_name">MedBeacon</string>
+
+    <!-- Login menu -->
+    <string name="login_password">Hasło</string>
+    <string name="login_username">Nazwa użytkownika</string>
+    <string name="login">Zaloguj</string>
+    <string name="createAccount">Nie masz konta? Zarejestruj się</string>
+    <string name="login_wrong">To pole jest wymagane</string>
+
+    <!-- Register menu one -->
+    <string name="register_username">* Nazwa użytkownika</string>
+    <string name="register_password">* Hasło</string>
+    <string name="register_confirm_password">* Potwierdź hasło</string>
+    <string name="register_mail">* E-mail</string>
+    <string name="next">Dalej</string>
+    <string name="require_fields">* Pola obowiązkowe</string>
+
+    <string name="register_wrong">To pole jest wymagane</string>
+    <string name="register_wrong_match">Wprowadzono różne hasła</string>
+
+    <!-- Register menu two -->
+    <string name="register_first_name">* Imię</string>
+    <string name="register_second_name">* Nazwisko</string>
+    <string name="register_birth_date">* Data urodzenia</string>
+    <string name="register_personal_identity_number">* PESEL</string>
+    <string name="register_place_of_birth">* Miejsce urodzenia</string>
+    <string name="register_sex">* Płeć</string>
+    <string name="register_priority">Priorytet</string>
+
+    <string name="register_register">Zarejestruj</string>
+
+    <!--////////Spinner Items///////////-->
+
+    <string-array name="spinner_sex">
+        <item>Mężczyzna</item>
+        <item>Kobieta</item>
+    </string-array>
+
+    <string-array name="spinner_priority">
+        <item>Brak</item>
+        <item>Ciąża</item>
+        <item>Zaawansowany wiek</item>
+        <item>Honorowy dawca krwi</item>
+    </string-array>
+
+    <!--////////////Main Menu//////////////-->
+
+    <string name="register">Rejestracja</string>
+    <string name="call_for_help">Wezwij pomoc</string>
+    <string name="account">Konto</string>
+
+    <!--//////////////////////////-->
+    <string name="test">xD</string>
+
+</resources>
