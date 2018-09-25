@@ -1,4 +1,4 @@
-package com.example.witicar.medbeacon.Resources;
+package com.example.witicar.medbeacon.resources;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

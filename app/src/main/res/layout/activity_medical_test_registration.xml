@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.example.witicar.medbeacon.activities.QueueForMedicalTest">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/test_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/test_registration_text"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:paddingBottom="20dp"/>
+
+        <TextView
+            android:id="@+id/test_queue_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            app:layout_constraintTop_toBottomOf="@id/test_description"
+            app:layout_constraintBottom_toTopOf="@id/test_queue"
+            android:text="@string/test_registration_queue_text"
+            android:textColor="@color/black"
+            android:visibility="invisible"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/test_queue"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/test_queue_text"
+            app:layout_constraintBottom_toTopOf="@id/test_registration"
+            android:gravity="center_horizontal"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:visibility="invisible"
+            android:padding="10dp"/>
+
+        <Button
+            android:id="@+id/test_registration"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/login_register_height"
+            android:onClick="testRegistration"
+            android:text="@string/test_registration"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/nextPatient_text"
+            android:layout_width="240dp"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:paddingLeft="45dp"
+            android:text="@string/test_nextPatient" />
+
+        <Button
+            android:id="@+id/nextPatient"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/login_register_height"
+            app:layout_constraintTop_toBottomOf="@id/nextPatient_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/test_nextPatient_button"
+            android:onClick="nextPatient"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
+

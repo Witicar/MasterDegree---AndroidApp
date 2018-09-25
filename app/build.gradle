@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.witicar.medbeacon"
-        minSdkVersion 14
+        minSdkVersion 16
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -28,9 +28,9 @@ dependencies {
 
     compile group: 'com.squareup.retrofit2', name: 'retrofit', version: '2.4.0'
     compile group: 'com.squareup.retrofit2', name: 'converter-gson', version: '2.4.0'
-    compile group: 'com.squareup.retrofit2', name: 'converter-jackson', version: '2.4.0'
     compile group: 'com.android.support', name: 'recyclerview-v7', version: '26.1.0'
     compile group: 'com.google.code.gson', name: 'gson', version: '2.8.4'
-    compile group: 'org.altbeacon', name: 'android-beacon-library', version: '2.13.1'
+    compile group: 'com.kontaktio', name: 'sdk', version: '3.3.0'
+    compile group: 'com.squareup.retrofit2', name: 'adapter-rxjava2', version: '2.4.0'
 
 }

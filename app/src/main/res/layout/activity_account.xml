@@ -1,9 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Activities.Account">
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".activities.Account">
 
-</android.support.constraint.ConstraintLayout>
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="#FFFFFF">
+
+            <!-- /////////////// Text ////////////// -->
+
+            <TextView
+                android:id="@+id/account_phone_number_text"
+                android:layout_width="@dimen/text_register_width"
+                android:layout_height="@dimen/login_register_height"
+                android:textColor="@color/dark_gray"
+                android:gravity="center_vertical"
+                android:text="@string/account_phone_number"
+                android:layout_margin="@dimen/login_register_margin"/>
+
+            <TextView
+                android:id="@+id/account_priority_text"
+                android:layout_width="@dimen/text_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintTop_toBottomOf="@id/account_phone_number_text"
+                android:textColor="@color/dark_gray"
+                android:gravity="center_vertical"
+                android:text="@string/account_priority"
+                android:layout_margin="@dimen/login_register_margin"/>
+
+            <TextView
+                android:id="@+id/account_country_text"
+                android:layout_width="@dimen/text_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintTop_toBottomOf="@id/account_priority_text"
+                android:textColor="@color/dark_gray"
+                android:gravity="center_vertical"
+                android:text="@string/account_country"
+                android:layout_margin="@dimen/login_register_margin"/>
+
+            <TextView
+                android:id="@+id/account_voivodeship_text"
+                android:layout_width="@dimen/text_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintTop_toBottomOf="@id/account_country_text"
+                android:textColor="@color/dark_gray"
+                android:gravity="center_vertical"
+                android:text="@string/account_voivodeship"
+                android:layout_margin="@dimen/login_register_margin"/>
+
+            <TextView
+                android:id="@+id/account_city_text"
+                android:layout_width="@dimen/text_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintTop_toBottomOf="@id/account_voivodeship_text"
+                android:textColor="@color/dark_gray"
+                android:gravity="center_vertical"
+                android:text="@string/account_city"
+                android:layout_margin="@dimen/login_register_margin"/>
+
+            <TextView
+                android:id="@+id/account_postal_code_text"
+                android:layout_width="@dimen/text_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintTop_toBottomOf="@id/account_city_text"
+                android:textColor="@color/dark_gray"
+                android:gravity="center_vertical"
+                android:text="@string/account_postal_code"
+                android:layout_margin="@dimen/login_register_margin"/>
+
+            <TextView
+                android:id="@+id/account_house_number_text"
+                android:layout_width="@dimen/text_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintTop_toBottomOf="@id/account_postal_code_text"
+                android:textColor="@color/dark_gray"
+                android:gravity="center_vertical"
+                android:text="@string/account_house_number"
+                android:layout_margin="@dimen/login_register_margin"/>
+
+            <!-- /////////////// Fields ////////////// -->
+
+            <EditText
+                android:id="@+id/account_phone_number_field"
+                android:layout_width="@dimen/field_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintLeft_toRightOf="@id/account_phone_number_text"
+                android:minEms="5"
+                android:inputType="phone"
+                android:layout_margin="@dimen/login_register_margin"
+                android:background="@color/field_color"
+                android:textColor="@color/black"/>
+
+            <Spinner
+                android:id="@+id/account_priority_field"
+                android:layout_width="@dimen/field_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintLeft_toRightOf="@id/account_priority_text"
+                app:layout_constraintTop_toBottomOf="@+id/account_phone_number_text"
+                android:layout_margin="@dimen/login_register_margin"
+                android:focusable="false"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/spinner_priority"
+                android:background="@color/field_color"
+                android:theme="@style/Spinner"/>
+
+            <EditText
+                android:id="@+id/account_country_field"
+                android:layout_width="@dimen/field_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintLeft_toRightOf="@id/account_country_text"
+                app:layout_constraintTop_toBottomOf="@+id/account_priority_text"
+                android:minEms="5"
+                android:layout_margin="@dimen/login_register_margin"
+                android:background="@color/field_color"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/account_voivodeship_field"
+                android:layout_width="@dimen/field_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintLeft_toRightOf="@id/account_voivodeship_text"
+                app:layout_constraintTop_toBottomOf="@+id/account_country_text"
+                android:minEms="5"
+                android:layout_margin="@dimen/login_register_margin"
+                android:background="@color/field_color"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/account_city_field"
+                android:layout_width="@dimen/field_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintLeft_toRightOf="@id/account_city_text"
+                app:layout_constraintTop_toBottomOf="@+id/account_voivodeship_text"
+                android:minEms="5"
+                android:layout_margin="@dimen/login_register_margin"
+                android:background="@color/field_color"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/account_postal_code_field"
+                android:layout_width="@dimen/field_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintLeft_toRightOf="@id/account_postal_code_text"
+                app:layout_constraintTop_toBottomOf="@+id/account_city_text"
+                android:minEms="5"
+                android:inputType="textPostalAddress"
+                android:layout_margin="@dimen/login_register_margin"
+                android:background="@color/field_color"
+                android:textColor="@color/black"/>
+
+            <EditText
+                android:id="@+id/account_house_number_field"
+                android:layout_width="@dimen/field_register_width"
+                android:layout_height="@dimen/login_register_height"
+                app:layout_constraintLeft_toRightOf="@id/account_house_number_text"
+                app:layout_constraintTop_toBottomOf="@+id/account_postal_code_text"
+                android:minEms="5"
+                android:inputType="textPostalAddress"
+                android:layout_margin="@dimen/login_register_margin"
+                android:background="@color/field_color"
+                android:textColor="@color/black"/>
+
+            <!--////////////////////////// Button //////////////////////-->
+
+            <Button
+                android:id="@+id/account_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/account_change"
+                app:layout_constraintTop_toBottomOf="@id/account_house_number_text"
+                android:layout_marginTop="16dp"
+                android:onClick="doChange"/>
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>

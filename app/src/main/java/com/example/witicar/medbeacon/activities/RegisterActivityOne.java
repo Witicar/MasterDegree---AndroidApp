@@ -1,4 +1,4 @@
-package com.example.witicar.medbeacon.Activities;
+package com.example.witicar.medbeacon.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,8 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.witicar.medbeacon.R;
-import com.example.witicar.medbeacon.Resources.RegisterResource;
-import com.example.witicar.medbeacon.RetrofitConfiguration.RetrofitConfiguration;
+import com.example.witicar.medbeacon.resources.RegisterResource;
+import com.example.witicar.medbeacon.retrofitConfiguration.RetrofitConfiguration;
 
 import retrofit2.Call;
 import retrofit2.Callback;

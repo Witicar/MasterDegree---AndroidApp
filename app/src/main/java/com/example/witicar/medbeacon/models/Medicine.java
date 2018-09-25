@@ -1,4 +1,4 @@
-package com.example.witicar.medbeacon.Models;
+package com.example.witicar.medbeacon.models;
 
 public class Medicine {
 
@@ -8,15 +8,9 @@ public class Medicine {
     private float price;
     private String quantity;
 
+    private Visit medicine_visit;
+
     public Medicine() {
-    }
-
-    public long getMedicinesID() {
-        return medicinesID;
-    }
-
-    public void setMedicinesID(long medicinesID) {
-        this.medicinesID = medicinesID;
     }
 
     public String getCode() {
@@ -49,5 +43,17 @@ public class Medicine {
 
     public void setQuantity(String quantity) {
         this.quantity = quantity;
+    }
+
+
+    ///////////////////////////////////////////////////////////////
+
+
+    public Visit getMedicine_visit() {
+        return medicine_visit;
+    }
+
+    public void setMedicine_visit(Visit medicine_visit) {
+        this.medicine_visit = medicine_visit;
     }
 }

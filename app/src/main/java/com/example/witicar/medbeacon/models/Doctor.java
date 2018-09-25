@@ -1,4 +1,7 @@
-package com.example.witicar.medbeacon.Models;
+package com.example.witicar.medbeacon.models;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Doctor {
 
@@ -7,9 +10,9 @@ public class Doctor {
     private String name;
     private String specialization;
     private int practiceNumber;
-    private int phoneNumber;
-    private String login;
-    private String password;
+    private long phoneNumber;
+    private HoursOfAdmission doctor_hoursOfAdmission;
+    private List<Visit> doctorVisits = new ArrayList<Visit>();
 
     public Doctor() {
     }
@@ -54,27 +57,29 @@ public class Doctor {
         this.practiceNumber = practiceNumber;
     }
 
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getLogin() {
-        return login;
+    ///////////////////////////////////////////////////////////////////////////////////////////
+
+    public HoursOfAdmission getDoctor_hoursOfAdmission() {
+        return doctor_hoursOfAdmission;
     }
 
-    public void setLogin(String login) {
-        this.login = login;
+    public void setDoctor_hoursOfAdmission(HoursOfAdmission doctor_hoursOfAdmission) {
+        this.doctor_hoursOfAdmission = doctor_hoursOfAdmission;
     }
 
-    public String getPassword() {
-        return password;
+    public List<Visit> getDoctorVisits() {
+        return doctorVisits;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setDoctorVisits(List<Visit> doctorVisits) {
+        this.doctorVisits = doctorVisits;
     }
 }

@@ -1,6 +1,7 @@
-package com.example.witicar.medbeacon.Resources;
+package com.example.witicar.medbeacon.resources;
 
-import com.example.witicar.medbeacon.Models.Patient;
+import com.example.witicar.medbeacon.models.Address;
+import com.example.witicar.medbeacon.models.Patient;
 
 import retrofit2.Call;
 import retrofit2.http.Body;

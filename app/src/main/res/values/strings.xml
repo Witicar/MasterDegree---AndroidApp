@@ -25,12 +25,39 @@
     <string name="register_second_name">* Nazwisko</string>
     <string name="register_birth_date">* Data urodzenia</string>
     <string name="register_personal_identity_number">* PESEL</string>
-    <string name="register_place_of_birth">* Miejsce urodzenia</string>
+    <string name="register_phone_number">* Numer Telefonu</string>
+    <string name="register_place_of_birth">Miejsce urodzenia</string>
     <string name="register_sex">* Płeć</string>
-    <string name="register_priority">Priorytet</string>
+    <string name="register_priority">* Priorytet</string>
+    <string name="register_country">Kraj</string>
+    <string name="register_voivodeship">Województwo</string>
+    <string name="register_city">Miasto/Wieś</string>
+    <string name="register_postal_code">Kod pocztowy</string>
+    <string name="register_house_number">Numer domu</string>
 
     <string name="register_register">Zarejestruj</string>
 
+
+    <!--/////////Account/////////////-->
+
+    <string name="account_phone_number">Numer Telefonu</string>
+    <string name="account_priority">Priorytet</string>
+    <string name="account_country">Kraj</string>
+    <string name="account_voivodeship">Województwo</string>
+    <string name="account_city">Miasto/Wieś</string>
+    <string name="account_postal_code">Kod pocztowy</string>
+    <string name="account_house_number">Numer domu</string>
+
+    <string name="account_change">Zmień</string>
+
+    <!--////////Registration///////////-->
+
+    <string name="registration_health_facility">Placówka zdrowia</string>
+    <string name="registration_doctor">Lekarz</string>
+    <string name="registration_term">Godzina</string>
+    <string name="registration_register">Wybierz termin</string>
+
+    <string name="registration_fake_time">Aktualny czas ( w celach testowych)</string>
     <!--////////Spinner Items///////////-->
 
     <string-array name="spinner_sex">
@@ -45,13 +72,27 @@
         <item>Honorowy dawca krwi</item>
     </string-array>
 
+    <string-array name="fake_weekDays">
+        <item>Poniedziałek</item>
+        <item>Wtorek</item>
+        <item>Środa</item>
+        <item>Czwartek</item>
+        <item>Piątek</item>
+        <item>Sobota</item>
+        <item>Niedziela</item>
+    </string-array>
+
     <!--////////////Main Menu//////////////-->
 
     <string name="register">Rejestracja</string>
-    <string name="call_for_help">Wezwij pomoc</string>
+    <string name="test">Odbiór wyników</string>
     <string name="account">Konto</string>
 
-    <!--//////////////////////////-->
-    <string name="test">xD</string>
+    <!--////////////Medical Test Registration////////////-->
 
+    <string name="test_nextPatient">Wywoływanie kolejnego pacjenta (w celach testowych)</string>
+    <string name="test_nextPatient_button">Kolejny Pacjent</string>
+    <string name="test_registration_text">Proszę podejść do Beacona przy okienku, aby możliwe było dodanie pacjenta do kolejki</string>
+    <string name="test_registration">Zarejestruj</string>
+    <string name="test_registration_queue_text">Ilość osób przed Tobą w kolejce wynosi</string>
 </resources>

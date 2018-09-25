@@ -1,4 +1,4 @@
-package com.example.witicar.medbeacon.Models;
+package com.example.witicar.medbeacon.models;
 
 import java.util.Date;
 
@@ -9,15 +9,9 @@ public class MedicalHistory {
     private Date dateOfMedicalHistory;
     private String symptoms;
 
+    private Visit medicalHistory_visit;
+
     public MedicalHistory() {
-    }
-
-    public long getMedicalHisotryID() {
-        return medicalHisotryID;
-    }
-
-    public void setMedicalHisotryID(long medicalHisotryID) {
-        this.medicalHisotryID = medicalHisotryID;
     }
 
     public String getIllness() {
@@ -42,5 +36,16 @@ public class MedicalHistory {
 
     public void setSymptoms(String symptoms) {
         this.symptoms = symptoms;
+    }
+
+    ////////////////////////////////////////////////////////////////
+
+
+    public Visit getMedicalHistory_visit() {
+        return medicalHistory_visit;
+    }
+
+    public void setMedicalHistory_visit(Visit medicalHistory_visit) {
+        this.medicalHistory_visit = medicalHistory_visit;
     }
 }

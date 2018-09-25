@@ -1,24 +1,17 @@
-package com.example.witicar.medbeacon.Models;
+package com.example.witicar.medbeacon.models;
 
 import java.util.Date;
 
 public class MedicalTest {
 
-    private Visit medicalTest_visit;
     private long medicalTestID;
     private String name;
     private Date dateOfMedicalTest;
     private String results;
 
+    private Visit medicalTest_visit;
+
     public MedicalTest() {
-    }
-
-    public long getMedicalTestID() {
-        return medicalTestID;
-    }
-
-    public void setMedicalTestID(long medicalTestID) {
-        this.medicalTestID = medicalTestID;
     }
 
     public String getName() {
@@ -43,5 +36,16 @@ public class MedicalTest {
 
     public void setResults(String results) {
         this.results = results;
+    }
+
+    //////////////////////////////////////////////////////////////////////
+
+
+    public Visit getMedicalTest_visit() {
+        return medicalTest_visit;
+    }
+
+    public void setMedicalTest_visit(Visit medicalTest_visit) {
+        this.medicalTest_visit = medicalTest_visit;
     }
 }

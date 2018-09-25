@@ -4,6 +4,121 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.Registration">
+    android:background="@drawable/background"
+    tools:context=".activities.Registration">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#FFFFFF">
+
+        <!-- /////////////// Text ////////////// -->
+
+        <TextView
+            android:id="@+id/registration_doctor_text"
+            android:layout_width="@dimen/text_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/dark_gray"
+            android:gravity="center_vertical"
+            android:text="@string/registration_doctor"
+            android:layout_margin="@dimen/login_register_margin"/>
+
+        <TextView
+            android:id="@+id/registration_term_text"
+            android:layout_width="@dimen/text_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/dark_gray"
+            app:layout_constraintTop_toBottomOf="@id/registration_doctor_text"
+            android:gravity="center_vertical"
+            android:text="@string/registration_term"
+            android:layout_margin="@dimen/login_register_margin"/>
+
+        <!-- /////////////// Fields ////////////// -->
+
+        <Spinner
+            android:id="@+id/registration_doctor_field"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:layout_margin="@dimen/login_register_margin"
+            app:layout_constraintLeft_toRightOf="@id/registration_doctor_text"
+            android:focusable="false"
+            android:drawSelectorOnTop="true"
+            android:background="@color/field_color"
+            android:theme="@style/Spinner"/>
+
+        <Spinner
+            android:id="@+id/registration_term_field"
+            android:layout_width="@dimen/field_register_width"
+            android:layout_height="@dimen/login_register_height"
+            android:layout_margin="@dimen/login_register_margin"
+            app:layout_constraintLeft_toRightOf="@id/registration_term_text"
+            app:layout_constraintTop_toBottomOf="@id/registration_doctor_text"
+            android:focusable="false"
+            android:drawSelectorOnTop="true"
+            android:background="@color/field_color"
+            android:theme="@style/Spinner"/>
+
+        <!-- /////////////// Button ////////////// -->
+
+        <Button
+            android:id="@+id/registration_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registration_register"
+            app:layout_constraintTop_toBottomOf="@id/registration_term_text"
+            android:layout_marginTop="16dp"
+            android:onClick="registerOnClick"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:paddingLeft="30dp"
+        android:background="#FFFFFF">
+
+        <TextView
+            android:id="@+id/fake_time_text"
+            android:layout_width="240dp"
+            android:layout_height="@dimen/login_register_height"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:text="@string/registration_fake_time" />
+
+        <Spinner
+            android:id="@+id/fake_weekDay"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/login_register_height"
+            android:minEms="5"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/fake_time_text"
+            android:focusable="false"
+            android:drawSelectorOnTop="true"
+            android:entries="@array/fake_weekDays"
+            android:background="@color/field_color"
+            android:theme="@style/Spinner" />
+
+        <EditText
+            android:id="@+id/fake_time"
+            android:layout_width="110dp"
+            android:layout_height="@dimen/login_register_height"
+            app:layout_constraintLeft_toRightOf="@id/fake_weekDay"
+            app:layout_constraintTop_toBottomOf="@id/fake_time_text"
+            android:minEms="5"
+            android:layout_margin="10dp"
+            android:focusable="false"
+            android:textColor="@color/black"
+            android:background="@color/field_color"
+            android:onClick="setFakeTimeOnEditTextTimeClick"/>
+
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>

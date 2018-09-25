@@ -1,6 +1,8 @@
-package com.example.witicar.medbeacon.Models;
+package com.example.witicar.medbeacon.models;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Patient {
 
@@ -8,22 +10,21 @@ public class Patient {
     private String surname;
     private String name;
     private String sex;
-    private int pesel;
+    private long pesel;
     private Date birthDate;
     private String placeOfBirth;
-    private int phoneNumber;
+    private long phoneNumber;
     private String login;
     private String password;
     private String email;
     private String priority;
 
+    private Address address_patient;
+    private List<Visit> patientVisites = new ArrayList<Visit>();
+    private MedicalTestRegistration medicalTestRegistration_patient;
+
     public Patient() {
 
-    }
-
-    public Patient(String login, String password) {
-        this.login = login;
-        this.password = password;
     }
 
     public long getPatientID() {
@@ -58,11 +59,11 @@ public class Patient {
         this.sex = sex;
     }
 
-    public int getPesel() {
+    public long getPesel() {
         return pesel;
     }
 
-    public void setPesel(int pesel) {
+    public void setPesel(long pesel) {
         this.pesel = pesel;
     }
 
@@ -82,11 +83,11 @@ public class Patient {
         this.placeOfBirth = placeOfBirth;
     }
 
-    public int getPhoneNumber() {
+    public long getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(long phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -120,5 +121,32 @@ public class Patient {
 
     public void setPriority(String priority) {
         this.priority = priority;
+    }
+
+    ////////////////////////////////////////////////////////////
+
+
+    public Address getAddress_patient() {
+        return address_patient;
+    }
+
+    public void setAddress_patient(Address address_patient) {
+        this.address_patient = address_patient;
+    }
+
+    public List<Visit> getPatientVisites() {
+        return patientVisites;
+    }
+
+    public void setPatientVisites(List<Visit> patientVisites) {
+        this.patientVisites = patientVisites;
+    }
+
+    public MedicalTestRegistration getMedicalTestRegistration_patient() {
+        return medicalTestRegistration_patient;
+    }
+
+    public void setMedicalTestRegistration_patient(MedicalTestRegistration medicalTestRegistration_patient) {
+        this.medicalTestRegistration_patient = medicalTestRegistration_patient;
     }
 }
